@@ -1,5 +1,7 @@
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.QueryableRequestSpecification;
+import io.restassured.specification.SpecificationQuerier;
 import org.json.JSONObject;
 import org.testng.Assert;
 
@@ -20,5 +22,6 @@ public class myFirstRestAssuredPostReq {
         out.println(res.getStatusCode());
         Assert.assertEquals(res.getStatusCode(), HttpURLConnection.HTTP_CREATED);
         out.println(res.prettyPrint());
+
     }
 }
